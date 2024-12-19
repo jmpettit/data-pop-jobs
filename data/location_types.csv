@@ -1,0 +1,5 @@
+name,description,content_types,nestable,parent__name,parent__description
+State,state location type,NoObject,true,NoObject,NoObject
+City,city location type,NoObject,true,State,state location type
+Data Center,A Data Center location,"dcim.device,dcim.rack,ipam.prefix",false,City,city location type
+Branch,A branch building,"dcim.device,dcim.rack,ipam.prefix",false,City,city location type
