@@ -4,7 +4,7 @@ sync_devices:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "basic system info.Hostname"
+        jpath: '"basic system info".Hostname'
         post_processor: "{{ obj }}"
 
   serial:
