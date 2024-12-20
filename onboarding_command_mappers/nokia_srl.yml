@@ -4,33 +4,33 @@ sync_devices:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "srl_nokia-state:system.name"
+        jpath: "basic_system_info.Hostname"
         post_processor: "{{ obj }}"
 
   serial:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "srl_nokia-state:system.serial-number"
+        jpath: "basic_system_info.Serial_Number"
         post_processor: "{{ obj }}"
 
   device_type:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "srl_nokia-state:system.platform"
+        jpath: "basic_system_info.Chassis_Type"
         post_processor: "{{ obj }}"
 
   mgmt_interface:
     commands:
       - command: "show interface all | as json"
         parser: "none"
-        jpath: "srl_nokia-interfaces:interface[?name=='mgmt0'].name"
+        jpath: "interfaces[?name=='mgmt0'].name"
         post_processor: "{{ obj[0] }}"
 
   mask_length:
     commands:
       - command: "show interface all | as json"
         parser: "none"
-        jpath: "srl_nokia-interfaces:interface[?name=='mgmt0'].subinterface[0].ipv4.address[0].prefix-length"
-        post_processor: "{{ obj }}" 
+        jpath: "interfaces[?name=='mgmt0'].subinterfaces[0].address[?type=='IPv4'].prefix"
+        post_processor: "{{ obj[0] | split('/')[1] }}" 
