@@ -25,7 +25,7 @@ sync_devices:
     commands:
       - command: "show interface all | as json"
         parser: "none"
-        jpath: "interfaces[?name=='mgmt0'].subinterfaces[].name"
+        jpath: "interfaces[?name=='mgmt0'].name"
         post_processor: "{{ obj[0] }}"
 
   mask_length:
