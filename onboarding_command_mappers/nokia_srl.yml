@@ -1,11 +1,4 @@
 ---
-platform_parsing_info:
-  nokia_srl:
-    command: "show version | as json"
-    parser: "none"
-    jpath: "basic_system_info.Chassis_Type"
-    post_processor: "{{ obj }}"
-
 sync_devices:
   hostname:
     commands:
@@ -40,4 +33,4 @@ sync_devices:
       - command: "show interface all | as json"
         parser: "none"
         jpath: "interfaces[?name=='mgmt0'].subinterfaces[0].address[?type=='IPv4'].prefix"
-        post_processor: "{{ obj[0] | split('/')[1] }}" 
+        post_processor: "{{ obj[0] | split('/')[1] }}"
