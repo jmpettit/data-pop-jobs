@@ -1,0 +1,13 @@
+ip_address_host,location_name,device_role_name,namespace,device_status_name,interface_status_name,ip_address_status_name,secrets_group_name,platform_name,set_mgmt_only,update_devices_without_primary_ip
+172.18.0.10,"Den-DC",Network,Global,Active,Active,Active,"DATA POPULATION",cisco_xe,True,True
+172.18.0.11,Den-DC,Network,Global,Active,Active,Active,"DATA POPULATION",cisco_xe,True,True
+172.18.0.12,Den-DC,Network,Global,Active,Active,Active,"DATA POPULATION",cisco_xe,True,True
+172.18.0.13,Den-DC,Network,Global,Active,Active,Active,"DATA POPULATION",cisco_nxos,True,True
+172.18.0.14,Den-DC,Network,Global,Active,Active,Active,"DATA POPULATION",cisco_nxos,True,True
+172.18.0.20,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",juniper_junos,True,True
+172.18.0.21,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",juniper_junos,True,True
+172.18.0.22,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",juniper_junos,True,True
+172.18.0.23,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",arista_eos,True,True
+172.18.0.24,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",arista_eos,True,True
+172.18.0.25,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",arista_eos,True,True
+172.18.0.26,Ashburn-DC,Network,Global,Active,Active,Active,"DATA POPULATION",arista_eos,True,True
