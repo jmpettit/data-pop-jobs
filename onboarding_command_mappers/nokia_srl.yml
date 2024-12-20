@@ -1,4 +1,11 @@
 ---
+platform_parsing_info:
+  nokia_srl:
+    command: "show version | as json"
+    parser: "none"
+    jpath: "basic_system_info.Chassis_Type"
+    post_processor: "{{ obj }}"
+
 sync_devices:
   hostname:
     commands:
