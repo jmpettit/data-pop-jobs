@@ -11,14 +11,14 @@ sync_devices:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "basic_system_info.Serial Number"
+        jpath: "basic_system_info['Serial Number']"
         post_processor: "{{ obj }}"
 
   device_type:
     commands:
       - command: "show version | as json"
         parser: "none"
-        jpath: "basic_system_info.Chassis Type"
+        jpath: "basic_system_info['Chassis Type']"
         post_processor: "{{ obj }}"
 
   mgmt_interface:
